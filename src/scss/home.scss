@@ -17,12 +17,14 @@
         text-align: center;
     }
     &__title {
+        transition: all 0.3s ease 0s;
         max-width: rem(750);
         &:not(:last-child) {
             @include adaptiveValue("margin-bottom", 69, 30);
         }
     }
     &__text {
+        transition: all 0.3s ease 0s;
         max-width: rem(570);
         &:not(:last-child) {
             @include adaptiveValue("margin-bottom", 48, 20);
@@ -37,6 +39,7 @@
     }
 }
 .icons-main-block {
+    transition: all 0.3s ease 0s;
     pointer-events: none;
     @media (max-width:$mobile){
           opacity: 0.2;
@@ -101,6 +104,22 @@
         }
     }
 }
+
+html.light .main-block  {
+    .icons-main-block {
+        &__circle {
+            &::before {
+                border: 1px solid #008000;
+            }
+        }
+    }
+    &__title {
+        
+    }
+    &__text {
+        color: #263238;
+    }
+}
 //====================================================================================================
 .partners {
     @include adaptiveValue("padding-bottom", 200, 50);
@@ -118,6 +137,24 @@
         text-align: center;
         img{max-width: 100%;}
     }
+}
+
+html.light .partners {
+    &__image {
+        display: none;
+		&_light {
+			display: block;
+		}
+	}
+}
+
+html.dark .partners {
+	&__image {
+        display: block;
+		&_light {
+			display: none;
+		}
+	}
 }
 //====================================================================================================
 .how {
@@ -197,7 +234,6 @@
         }
     }
 }
-
 // =============================================================
 .pathway {
     @include adaptiveValue("padding-top", 100, 25);
@@ -304,6 +340,16 @@
         }
     }
 }
+
+html.light .spollers-pathway {
+    &__item {
+        background: rgba(0, 128, 0, 0.05);
+    }
+    &__title {
+        color: #263238;
+    }
+
+}
 // ==============================================================
 .why {
     @include adaptiveValue("padding-top", 100, 25);
@@ -374,6 +420,16 @@
             text-align: center;
             line-height: rem(70);
             font-weight: 600;
+        }
+    }
+}
+
+html.light .steps-why {
+    &__item {
+        color: #263238;
+        &::before{        
+            color: #008000;
+            background: rgba(0, 128, 0, 0.10);
         }
     }
 }
@@ -448,6 +504,13 @@
         line-height: 177%;
     }
 }
+
+html.light .item-review {
+    background: rgba(0, 128, 0, 0.05);
+    &__name {
+        color: #263238;
+    }
+}
 // ==============================================================
 .download {
     @include adaptiveValue("padding-bottom", 200, 50);
@@ -511,6 +574,17 @@
             &::before{
                 transform: translate(-50%, -6%);
             }
+        }
+    }
+}
+
+html.light .download {
+    &__body {
+        background: rgba(0, 128, 0, 0.05);
+    }
+    &__circle {
+        &::before{
+            border: 1px solid rgba(0, 128, 0, 0.34);
         }
     }
 }

@@ -1,6 +1,7 @@
 //<FORM>
 // Снипет (HTML):
 .form {
+	transition: all 0.3s ease 0s;
 	max-width: rem(533);
 	background-color: #fff;
 	border-radius: 10px;
@@ -46,6 +47,14 @@
 		padding-left: rem(26);
 	}
 }
+
+html.light .form {
+	background: rgba(38, 50, 56, 0.10);
+	&__input {
+		background: transparent;
+	}
+}
+
 //</FORM>
 
 // <BUTTONS>

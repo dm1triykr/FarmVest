@@ -21,6 +21,7 @@
 		}
 	}
 	&_border {
+		transition: all 0.3s ease 0s;
 		background-color: transparent;
 		border: 1px solid #fff;
 		padding: rem(20) rem(25);
@@ -39,6 +40,21 @@
 		padding: rem(15) rem(20);
 		&_border {
 			padding: rem(14) rem(20);
+		}
+	}
+}
+
+html.light .button {
+	&_border {
+		background-color: transparent;
+		border: 1px solid #263238;
+		color: #263238;
+		@media (any-hover: hover) {
+			&:hover {
+				border: 1px solid $greenColor;
+				color: $greenColor;
+				background-color: transparent;
+			}
 		}
 	}
 }

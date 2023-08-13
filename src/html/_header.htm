@@ -1,8 +1,15 @@
 <header class="header">
 	<div class="header__container-big">
-		<a href="" class="header__logo">
-			<img src="@img/logo.svg" alt="logo">
-		</a>
+		<div class="header__logo">
+			<a href="" class="">
+				<img src="@img/logo.svg" alt="logo" class="header__logo_dark">
+				<img src="@img/logo-light.svg" alt="logo" class="header__logo_light">
+			</a>
+			<div class="header__theme theme">
+				<button type="button" class="theme__change"></button>
+				<button type="button" class="theme__reset"></button>
+			</div>
+		</div>
 		<div class="header__menu menu">
 			<nav class="menu__body">
 				<ul class="menu__list">

@@ -18,6 +18,7 @@
 }
 // ========================================================================
 .title {
+    transition: all 0.3s ease 0s;
     font-weight: 600;
     font-size: rem(70);
     line-height: math.div(65, 70);
@@ -35,8 +36,18 @@
 }
 // ========================================================================
 .text {
+    transition: all 0.3s ease 0s;
     line-height: 180%;
 }
+
+html.light .title {
+    color: #263238;
+}
+
+html.light .text {
+    color: #263238;
+}
+
 //========================================================================
 .image-block {
     display: flex;
@@ -87,10 +98,65 @@
         }
     }
 }
+
+html.light .image-block {
+    background: rgba(0, 128, 0, 0.05);
+    &__circle {
+        &::before{
+            border: 1px solid #008000;
+        }
+    }
+}
 // ========================================================================
 .form {
     &_input {
     }
     &__button {
     }
+}
+// Theme
+.theme {
+    position: relative;
+    display: flex;
+}
+
+.theme__change {
+    flex: 0 0 rem(24);
+    width: rem(24);
+    height: rem(24);
+}
+
+html.dark .theme__change {
+    background: url('../img/theme/light.png') 0 0 / 100% no-repeat;
+}
+
+html.light .theme__change {
+    background: url('../img/theme/dark.png') 0 0 / 100% no-repeat;
+}
+
+.theme__reset {
+    position: relative;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.theme__reset.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.theme__reset::before {
+    content: 'x';
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    font-size: 7px;
+    border-radius: 50%;
+    line-height: 10px;
+    color: #fff;
+    text-align: center;
+    background-color: #666;
 }

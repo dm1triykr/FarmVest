@@ -151,4 +151,59 @@
 		}
     }
 }
+
+html.light .footer {
+    background: rgba(242, 248, 242, 0.50);
+    &__logo {
+		&_light {
+			display: block;
+		}
+		&_dark {
+			display: none;
+		}
+	}
+    &__main {
+        @include adaptiveValue("padding-top", 68, 30);
+        @include adaptiveValue("padding-bottom", 100, 30);
+        border-bottom: 1px solid rgba(38, 50, 56, 0.31);
+    }
+    &__copy {
+        color: #263238;
+    }
+}
+
+html.dark .footer {
+	&__logo {
+		&_light {
+			display: none;
+		}
+		&_dark {
+			display: block;
+		}
+	}
+}
+
+html.light .menu-footer {
+    &__link {
+        color: #263238;
+		@media (any-hover: hover){
+			&:hover{
+				color: $greenColor;
+			}
+		}
+    }
+}
+html.light .main-footer {
+    &__label {
+        color: #263238;
+    }
+    &__phone {
+        color: #263238;
+		@media (any-hover: hover){
+			&:hover{
+				color: $greenColor;
+			}
+		}
+    }
+}
 //====================================================================================================

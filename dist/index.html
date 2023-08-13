@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230813113545">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230813235936">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,9 +16,16 @@
 	<div class="wrapper">
 		<header class="header">
 			<div class="header__container-big">
-				<a href="" class="header__logo">
-					<img src="img/logo.svg" alt="logo">
-				</a>
+				<div class="header__logo">
+					<a href="" class="">
+						<img src="img/logo.svg" alt="logo" class="header__logo_dark">
+						<img src="img/logo-light.svg" alt="logo" class="header__logo_light">
+					</a>
+					<div class="header__theme theme">
+						<button type="button" class="theme__change"></button>
+						<button type="button" class="theme__reset"></button>
+					</div>
+				</div>
 				<div class="header__menu menu">
 					<nav class="menu__body">
 						<ul class="menu__list">
@@ -92,19 +99,24 @@
 				<div class="partners__container-big">
 					<div class="partners__container">
 						<div class="partners__item">
-							<img src="img/partners/01.svg" alt="partners">
+							<img src="img/partners/01.svg" alt="partners" class="partners__image">
+							<img src="img/partners/01-light.svg" alt="partners" class="partners__image_light">
 						</div>
 						<div class="partners__item">
-							<img src="img/partners/02.svg" alt="partners">
+							<img src="img/partners/02.svg" alt="partners" class="partners__image">
+							<img src="img/partners/02-light.svg" alt="partners" class="partners__image_light">
 						</div>
 						<div class="partners__item">
-							<img src="img/partners/03.svg" alt="partners">
+							<img src="img/partners/03.svg" alt="partners" class="partners__image">
+							<img src="img/partners/03-light.svg" alt="partners" class="partners__image_light">
 						</div>
 						<div class="partners__item">
-							<img src="img/partners/04.svg" alt="partners">
+							<img src="img/partners/04.svg" alt="partners" class="partners__image">
+							<img src="img/partners/04-light.svg" alt="partners" class="partners__image_light">
 						</div>
 						<div class="partners__item">
-							<img src="img/partners/05.svg" alt="partners">
+							<img src="img/partners/05.svg" alt="partners" class="partners__image">
+							<img src="img/partners/05-light.svg" alt="partners" class="partners__image_light">
 						</div>
 					</div>
 				</div>
@@ -291,7 +303,8 @@
 				<div class="footer__main main-footer">
 					<div class="main-footer__info">
 						<a href="" class="main-footer__logo">
-							<img src="img/footer/logo.svg" alt="Logo">
+							<img src="img/footer/logo.svg" alt="Logo" class="footer__logo_dark">
+							<img src="img/footer/logo-light.svg" alt="logo" class="footer__logo_light">
 						</a>
 						<div class="main-footer__text text">
 							High level experience in web design and development knowledge, producing quality work.
@@ -360,7 +373,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20230813113545"></script>
+	<script src="js/app.min.js?_v=20230813235936"></script>
 </body>
 
 </html>
