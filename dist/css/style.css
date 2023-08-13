@@ -594,15 +594,15 @@ html.no-webp.light .theme__change{
   }
 }
 
-@supports (width: clamp( 7.5rem , 6.2042253521rem  +  2.6995305164vw , 8.9375rem )) {
+@supports (width: clamp( 7.8125rem , 4.150528169rem  +  7.6291079812vw , 11.875rem )) {
   .header__logo {
-    width: clamp( 7.5rem , 6.2042253521rem  +  2.6995305164vw , 8.9375rem );
+    width: clamp( 7.8125rem , 4.150528169rem  +  7.6291079812vw , 11.875rem );
   }
 }
 
-@supports not (width: clamp( 7.5rem , 6.2042253521rem  +  2.6995305164vw , 8.9375rem )) {
+@supports not (width: clamp( 7.8125rem , 4.150528169rem  +  7.6291079812vw , 11.875rem )) {
   .header__logo {
-    width: calc(7.5rem + 1.4375 * (100vw - 48rem) / 53.25);
+    width: calc(7.8125rem + 4.0625 * (100vw - 48rem) / 53.25);
   }
 }
 
@@ -684,7 +684,7 @@ html.light .header .menu__link {
 }
 
 html.light .header .menu__body::before {
-  background-color: #8a8a8a;
+  background-color: #c9c9c9;
 }
 
 html.light .header._header-scroll {
@@ -2157,7 +2157,7 @@ html.light .download__circle::before {
   }
 
   html.light .header .menu__body {
-    background-color: #adadad;
+    background-color: #e6e6e6;
   }
 
   .icon-menu {
