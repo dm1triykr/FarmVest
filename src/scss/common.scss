@@ -1,0 +1,96 @@
+// Заголовки, общие БЄМ блоки и проче...
+
+.page {
+    &__main {
+    }
+    &__partners {
+    }
+    &__how {
+    }
+    &__pathway {
+    }
+    &__why {
+    }
+    &__reviews {
+    }
+    &__download {
+    }
+}
+// ========================================================================
+.title {
+    font-weight: 600;
+    font-size: rem(70);
+    line-height: math.div(65, 70);
+    color: #fff;
+    @include adaptiveValue("font-size", 70, 45);
+    span {
+        color: $greenColor;
+    }
+    &_s64 {
+        @include adaptiveValue("font-size", 64, 40);
+    }
+    &_s56 {
+        @include adaptiveValue("font-size", 56, 35);
+    }
+}
+// ========================================================================
+.text {
+    line-height: 180%;
+}
+//========================================================================
+.image-block {
+    display: flex;
+    align-self: start;
+    border-radius: rem(20);
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.05);
+    @include adaptiveValue("padding-top", 165, 30);
+    @include adaptiveValue("padding-bottom", 165, 30);
+    @include adaptiveValue("padding-left", 45, 30);
+    @include adaptiveValue("padding-right", 45, 30);
+    position: relative;
+    &__circle {
+        position: absolute;
+        top: 0;
+        right: 0;
+        @include adaptiveValue("width", 585, 350);
+        @include adaptiveValue("height", 585, 350);
+        &::before{
+            content:'';
+            position: absolute;
+            border-radius: 50%;
+            border: 1px solid #fff;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+        &_1 {
+            &::before{
+                transform: translate(calc(50% - rem(18)), -20%);
+            }
+        }
+        &_2 {
+            &::before{
+                transform: translate(calc(50% - rem(20)), -6%);
+            }
+        }
+    }
+    &__item {
+        text-align: center;
+        flex: 1 1 100%;
+        position: relative;
+        z-index: 2;
+        img {
+            max-width: 100%;
+            border-radius: rem(20);
+        }
+    }
+}
+// ========================================================================
+.form {
+    &_input {
+    }
+    &__button {
+    }
+}
