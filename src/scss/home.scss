@@ -341,6 +341,9 @@ html.light .partners {
         @media (max-width:$mobileSmall){
             text-align: center; 
        }
+       &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 48, 20);
+    }
     }
     &__spollers {
         display: grid;

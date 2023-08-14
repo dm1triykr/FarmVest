@@ -1480,6 +1480,18 @@ html.light .partners__item svg {
   }
 }
 
+@supports (margin-bottom: clamp( 1.25rem , 0.8289473684rem  +  2.1052631579vw , 3rem )) {
+  .pathway__text:not(:last-child) {
+    margin-bottom: clamp( 1.25rem , 0.8289473684rem  +  2.1052631579vw , 3rem );
+  }
+}
+
+@supports not (margin-bottom: clamp( 1.25rem , 0.8289473684rem  +  2.1052631579vw , 3rem )) {
+  .pathway__text:not(:last-child) {
+    margin-bottom: calc(1.25rem + 1.75 * (100vw - 20rem) / 83.125);
+  }
+}
+
 .pathway__spollers {
   display: -ms-grid;
   display: grid;
