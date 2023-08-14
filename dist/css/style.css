@@ -229,6 +229,7 @@ html.light .form__input {
 }
 
 .button {
+  position: relative;
   font-family: Lato;
   text-align: center;
   font-weight: 500;
@@ -239,6 +240,7 @@ html.light .form__input {
   padding: 1.3125rem 1.5625rem;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  overflow: hidden;
 }
 
 .button_border {
@@ -339,6 +341,41 @@ html.light .title {
 
 html.light .text {
   color: #263238;
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  -webkit-animation: button-circle 3s ease forwards;
+          animation: button-circle 3s ease forwards;
+}
+
+@-webkit-keyframes button-circle {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+
+  100% {
+    -webkit-transform: scale(20);
+            transform: scale(20);
+    opacity: 0;
+  }
+}
+
+@keyframes button-circle {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+
+  100% {
+    -webkit-transform: scale(20);
+            transform: scale(20);
+    opacity: 0;
+  }
 }
 
 .image-block {

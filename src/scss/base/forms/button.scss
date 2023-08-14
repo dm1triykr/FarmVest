@@ -2,6 +2,7 @@
 // Снипет (HTML): btn
 
 .button {
+	position: relative;
 	font-family: Lato;
 	text-align: center;
 	font-weight: 500;
@@ -11,6 +12,7 @@
 	background-color: #23B123;
 	padding: rem(21) rem(25);
 	transition: all 0.3s ease;
+	overflow: hidden;
 	@media (min-width:$tablet){
 		min-width: rem(142); 
 	}
