@@ -51,6 +51,12 @@
         &:not(:last-child) {
             margin-bottom: rem(24);
         }
+        svg {
+            line {
+                stroke: #fff;
+            }
+            fill: #fff;
+        }
     }
     &__text {
     }
@@ -115,6 +121,7 @@
     gap: rem(16);
 
     &__item {
+        display: block;
         flex: 0 0 rem(48);
         width: rem(48);
         height: rem(48);
@@ -128,6 +135,15 @@
             &:hover {
                 background-color: #81f181;
             } 
+        }
+        svg {
+            fill: #23B123;
+        }
+        &_stroke {
+            svg {
+                fill: none;
+                stroke: #23B123;
+            }
         }
     }
 }
@@ -152,16 +168,28 @@
     }
 }
 
+html.light .social {
+    &__item {
+        background-color: #23B123;
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: #78e678;
+            } 
+        }
+        svg {
+            fill: #fff;
+        }
+        &_stroke {
+            svg {
+                fill: none;
+                stroke: #fff;
+            }
+        }
+    }
+}
+
 html.light .footer {
     background: rgba(242, 248, 242, 0.50);
-    &__logo {
-		&_light {
-			display: block;
-		}
-		&_dark {
-			display: none;
-		}
-	}
     &__main {
         @include adaptiveValue("padding-top", 68, 30);
         @include adaptiveValue("padding-bottom", 100, 30);
@@ -172,14 +200,14 @@ html.light .footer {
     }
 }
 
-html.dark .footer {
-	&__logo {
-		&_light {
-			display: none;
-		}
-		&_dark {
-			display: block;
-		}
+html.light .main-footer {
+    &__logo {
+		svg {
+            line {
+                stroke: #263238;
+            }
+            fill: #263238;
+        }
 	}
 }
 
@@ -193,6 +221,7 @@ html.light .menu-footer {
 		}
     }
 }
+
 html.light .main-footer {
     &__label {
         color: #263238;

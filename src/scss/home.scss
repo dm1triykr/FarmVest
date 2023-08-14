@@ -38,6 +38,7 @@
     &__icons {
     }
 }
+
 .icons-main-block {
     transition: all 0.3s ease 0s;
     pointer-events: none;
@@ -49,30 +50,51 @@
         &_1 {
             top: percent(675, 974);
             left: rem(15);
+            svg {
+                fill: #fff;
+            }
         }
         &_2 {
             top: percent(380, 974);
             left: percent(237, 1620);
+            svg {
+                fill: #fff;
+            }
         }
         &_3 {
             top: percent(757, 974);
             left: percent(403, 1620);
+            svg {
+                stroke: #fff;
+            }
         }
         &_4 {
             top: percent(134, 974);
             left: percent(1149, 1620);
+            svg {
+                fill: #fff;
+            }
         }
         &_5 {
             top: percent(419, 974);
             left: percent(1325, 1620);
+            svg {
+                fill: #fff;
+            }
         }
         &_6 {
             top: percent(776, 974);
             left: percent(1321, 1620);
+            svg {
+                stroke: #fff;
+            }
         }
         &_7 {
             top: percent(367, 974);
             right: rem(15);
+            svg {
+                stroke: #fff;
+            }
         }
     }
     &__circle {
@@ -107,6 +129,46 @@
 
 html.light .main-block  {
     .icons-main-block {
+        @media (max-width:$mobile){
+             opacity: 1; 
+        }
+        &__item {
+            &_1 {
+                svg {
+                    fill: rgba(38, 50, 56, 0.40);
+                }
+            }
+            &_2 {
+                svg {
+                    fill: rgba(38, 50, 56, 0.40);
+                }
+            }
+            &_3 {
+                svg {
+                    stroke: rgba(38, 50, 56, 0.40);
+                }
+            }
+            &_4 {
+                svg {
+                    fill: rgba(38, 50, 56, 0.40);
+                }
+            }
+            &_5 {
+                svg {
+                    fill: rgba(38, 50, 56, 0.40);
+                }
+            }
+            &_6 {
+                svg {
+                    stroke: rgba(38, 50, 56, 0.40);
+                }
+            }
+            &_7 {
+                svg {
+                    stroke: rgba(38, 50, 56, 0.40);
+                }
+            }
+        }
         &__circle {
             &::before {
                 border: 1px solid #008000;
@@ -135,26 +197,20 @@ html.light .main-block  {
     }
     &__item {
         text-align: center;
-        img{max-width: 100%;}
+        svg {
+            fill: #fff;
+            fill-opacity: 0.5;
+        }
     }
 }
 
 html.light .partners {
-    &__image {
-        display: none;
-		&_light {
-			display: block;
-		}
-	}
-}
-
-html.dark .partners {
-	&__image {
-        display: block;
-		&_light {
-			display: none;
-		}
-	}
+    &__item {
+        svg {
+            fill: #263238;
+            fill-opacity: 1;
+        }
+    }
 }
 //====================================================================================================
 .how {

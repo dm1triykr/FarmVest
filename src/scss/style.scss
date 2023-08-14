@@ -64,6 +64,14 @@ body {
 	}
 }
 
+img {
+	max-width: 100%;
+}
+
+path { 
+	fill:inherit; stroke:inherit; 
+}
+
 html.light body {
     background: #fff;
 }
