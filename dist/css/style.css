@@ -643,15 +643,15 @@ html.no-webp.light .theme__change{
   fill: #fff;
 }
 
-@supports (width: clamp( 6.25rem , 1.1795774648rem  +  10.5633802817vw , 11.875rem )) {
+@supports (width: clamp( 6.25rem , 3.8274647887rem  +  5.0469483568vw , 8.9375rem )) {
   .header__logo svg {
-    width: clamp( 6.25rem , 1.1795774648rem  +  10.5633802817vw , 11.875rem );
+    width: clamp( 6.25rem , 3.8274647887rem  +  5.0469483568vw , 8.9375rem );
   }
 }
 
-@supports not (width: clamp( 6.25rem , 1.1795774648rem  +  10.5633802817vw , 11.875rem )) {
+@supports not (width: clamp( 6.25rem , 3.8274647887rem  +  5.0469483568vw , 8.9375rem )) {
   .header__logo svg {
-    width: calc(6.25rem + 5.625 * (100vw - 48rem) / 53.25);
+    width: calc(6.25rem + 2.6875 * (100vw - 48rem) / 53.25);
   }
 }
 
@@ -730,14 +730,6 @@ html.light .header .menu__body::before {
 
 html.light .header._header-scroll {
   background-color: rgba(116, 116, 116, 0.8);
-}
-
-html.dark .header__logo_light {
-  display: none;
-}
-
-html.dark .header__logo_dark {
-  display: block;
 }
 
 .icon-menu {
